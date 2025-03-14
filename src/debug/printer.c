@@ -1,5 +1,5 @@
 #ifdef _WIN32
-// Para usar _strdup, desactivar warnings
+// Para usar _strdup, deactivate warnings
 #define _CRT_SECURE_NO_WARNINGS
 #endif
 

@@ -9,10 +9,8 @@ typedef enum {
     DEBUG_FATAL
 } DebugType;
 
-// Variable global para habilitar/deshabilitar colores ANSI
 extern int debug_colors_supported;
 
-// Función principal de impresión
 void print_debug(DebugType type, const char *msg, const char *detail);
 
-#endif // PRINTER_H
+#endif
