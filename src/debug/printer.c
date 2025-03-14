@@ -11,12 +11,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdbool.h>
-
-// extern int debug_colors_supported; // Se define en debug.c
 
 // -------------------------------------------------------------------------
-// Reemplazo portable para strdup (Windows vs Linux/macOS).
+// Portable replacebent for my_srrdup (Windows vs Linux/macOS).
 // -------------------------------------------------------------------------
 static char* my_strdup(const char* s) {
     if (!s) return NULL;
@@ -33,7 +30,7 @@ static char* my_strdup(const char* s) {
 }
 
 // -------------------------------------------------------------------------
-// Formatea el tiempo con 6 decimales y 0..2 espacios a la izquierda
+// Formatting
 // -------------------------------------------------------------------------
 static void format_time(double t, char *dst, size_t size) {
     char temp[32];
