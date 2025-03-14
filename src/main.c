@@ -4,12 +4,7 @@
 int main(void) {
     init_debug();
 
-    // Ejemplo simple de uso
-    //message(DEBUG_INFO, "Comenzando Fibonacci Demo Creativa", "");
-
     // run_fibonacci_examples();
-
-    // message(DEBUG_WARN, "Programa finalizado, revisa mensajes anteriores para ver la salida completa.", "");
 
     message(DEBUG_DEBUG, "TEST", "1");
     message(DEBUG_INFO, "TEST", "2");
