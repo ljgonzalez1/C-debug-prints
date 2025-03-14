@@ -1,10 +1,5 @@
 CC = gcc
 
-# Para Windows se puede usar -D_CRT_SECURE_NO_WARNINGS
-# Para Linux/macOS se habilita -D_POSIX_C_SOURCE=200809L
-# En la práctica, si compilas en Windows con MinGW, `_POSIX_C_SOURCE` no le afecta,
-# pero no molesta. También es posible usar un #ifdef en el Makefile, pero para
-# simplificar, lo dejamos así.
 CFLAGS = -Wall -Wextra -std=c99 -D_POSIX_C_SOURCE=200809L -D_CRT_SECURE_NO_WARNINGS
 
 SRCDIR = src
