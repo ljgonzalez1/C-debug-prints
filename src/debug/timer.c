@@ -30,8 +30,8 @@ void init_time() {
 double get_elapsed_time() {
     struct timespec now;
     clock_gettime(CLOCK_MONOTONIC, &now);
-    return (now.tv_sec - start_time.tv_sec)
-         + (now.tv_nsec - start_time.tv_nsec) / 1e9;
+    return now.tv_sec - start_time.tv_sec
+           + (now.tv_nsec - start_time.tv_nsec) / 1e9;
 }
 
 #endif
