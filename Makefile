@@ -3,17 +3,15 @@ CC = gcc
 CFLAGS = -Wall -Wextra -std=c99 -D_POSIX_C_SOURCE=200809L -D_CRT_SECURE_NO_WARNINGS
 
 SRCDIR = src
-FIBDIR = $(SRCDIR)/fibonacci
 DEBUGDIR = $(SRCDIR)/debug
 
 OBJS = \
 	$(SRCDIR)/main.o \
-	$(FIBDIR)/fibonacci.o \
 	$(DEBUGDIR)/debug.o \
 	$(DEBUGDIR)/printer.o \
 	$(DEBUGDIR)/timer.o
 
-TARGET = binary
+TARGET = test_debug_binary
 
 .PHONY: all clean
 
