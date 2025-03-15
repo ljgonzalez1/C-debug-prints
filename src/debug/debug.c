@@ -6,15 +6,13 @@
 #include <string.h>
 #include <stdio.h>
 
-// Definición global => Se declara extern en printer.h
 int debug_colors_supported = 0;
 
 void init_debug(void) {
     init_time();
-    debug_colors_supported = supports_color(); // 1 si soporte ANSI, 0 si no
+    debug_colors_supported = supports_color();
 }
 
-// Función con formato variádico para mensaje principal y detail
 void message(DebugType type, const char *msg_fmt, const char *detail_fmt, ...) {
     char msg[1024];
     char detail[1024] = "";
@@ -30,7 +28,6 @@ void message(DebugType type, const char *msg_fmt, const char *detail_fmt, ...) {
 
     va_end(args);
 
-    // Llamada a printer
     if (strlen(detail) == 0)
         print_debug(type, msg, NULL);
     else
