@@ -9,7 +9,6 @@ int main(void) {
     message(DEBUG_WARN, "TEST", "3");
     message(DEBUG_ERROR, "TEST", "");
     message(DEBUG_FATAL, "TEST", "5");
-    message(DEBUG_FATAL, "", "6");
 
     printf("Test 7\n");
 
