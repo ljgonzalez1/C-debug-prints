@@ -25,9 +25,6 @@ $(TARGET): $(OBJS)
 $(SRCDIR)/main.o: $(SRCDIR)/main.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(FIBDIR)/fibonacci.o: $(FIBDIR)/fibonacci.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
 $(DEBUGDIR)/debug.o: $(DEBUGDIR)/debug.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
