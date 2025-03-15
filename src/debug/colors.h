@@ -4,9 +4,6 @@
 #include <windows.h>
 #include <io.h>
 
-// Simple detección: Intento de ver si la consola Win10 o superior soporta
-// secuencias ANSI. Para la mayoría de shells, puede requerir habilitar VT100.
-// Por simplicidad, retornamos 1 si se puede setear modo. O dev 0 si no.
 static inline int supports_color() {
     HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
     if (hOut == INVALID_HANDLE_VALUE) return 0;
@@ -20,7 +17,6 @@ static inline int supports_color() {
 #else
 #include <unistd.h>
 static inline int supports_color() {
-    // Asumimos 1 en Linux/macOS. Se puede refinar con isatty, etc.
     return 1;
 }
 #endif
@@ -31,7 +27,7 @@ static inline int supports_color() {
 #define ANSI_ITALIC      "\033[3m"
 #define ANSI_UNDERLINE   "\033[4m"
 
-// Colores
+// Colors
 #define ANSI_FG_RED      "\033[31m"
 #define ANSI_FG_GREEN    "\033[32m"
 #define ANSI_FG_YELLOW   "\033[33m"
