@@ -1,4 +1,5 @@
 #include "debug/debug.h"
+#include <stdio.h>
 
 int main(void) {
     init_debug();
@@ -9,6 +10,8 @@ int main(void) {
     message(DEBUG_ERROR, "TEST", "");
     message(DEBUG_FATAL, "TEST", "5");
     message(DEBUG_FATAL, "", "6");
+
+    printf("Test 7\n");
 
     return 0;
 }
