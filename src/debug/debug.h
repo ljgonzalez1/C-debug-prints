@@ -7,4 +7,4 @@ void init_debug(void);
 
 void message(DebugType type, const char *msg_fmt, const char *detail_fmt, ...);
 
-#endif // DEBUG_H
+#endif
